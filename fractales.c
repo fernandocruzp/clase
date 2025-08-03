@@ -139,10 +139,9 @@ int main() {
                 printf("• Programación estructurada\n");
                 printf("• Visualización de datos\n\n");
                 printf("¡Todo compilado y ejecutado desde Emacs!\n");
-                printf("Comando usado: M-x compile -> gcc -o fractales fractales.c\n");
+                printf("Comando usado: M-x compile -> gcc -o fractales fractales.c -lm\n");
                 break;
             case 0:
-                printf("\n¡Gracias por explorar ciencias de la computación!\n");
                 printf("Recuerda: Emacs es tu mejor amigo para programar 🚀\n");
                 break;
             default:

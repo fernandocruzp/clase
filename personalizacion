@@ -29,13 +29,13 @@ Este archivo contiene las configuraciones de Emacs Lisp que puedes copiar a tu a
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "tu-email@gmail.com" "tu-contraseña-de-aplicacion"))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 587 mdelamadrid859@gmail.com saxhwarelfvewumm))
       smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-user "tu-email@gmail.com")
+      smtpmail-smtp-user "mdelamadrid859@gmail.com")
 
 ;; Configuración adicional para correo
-(setq user-mail-address "tu-email@gmail.com"
-      user-full-name "Tu Nombre Completo")
+(setq user-mail-address "mdelamadrid859@gmail.com"
+      user-full-name "Miguel de la madrid")
 
 ;; Habilitar STARTTLS
 (require 'starttls)
