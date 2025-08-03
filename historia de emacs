@@ -1,0 +1,42 @@
+Historia de Emacs
+
+Emacs fue creado por Richard Stallman en 1976 en el MIT (Instituto Tecnológico de Massachusetts). El nombre "Emacs" proviene de "Editor MACroS", haciendo referencia a su capacidad de crear y usar macros para automatizar tareas de edición.
+
+Orígenes y Desarrollo Temprano
+
+La historia de Emacs comienza con TECO (Text Editor and COrrector), un editor de texto primitivo que permitía la creación de macros. Los usuarios del MIT comenzaron a crear conjuntos de macros TECO que facilitaban la edición, y el más popular de estos conjuntos se llamó "Emacs".
+
+Richard Stallman tomó estas ideas y creó la primera versión de Emacs como un conjunto de macros TECO. Sin embargo, pronto se dio cuenta de que necesitaba algo más poderoso y flexible.
+
+GNU Emacs
+
+En 1984, Stallman comenzó el desarrollo de GNU Emacs como parte del Proyecto GNU. Esta versión fue escrita desde cero en C y Emacs Lisp, convirtiéndose en uno de los primeros programas del proyecto GNU.
+
+GNU Emacs se lanzó oficialmente en 1985 y se convirtió en el editor estándar para muchos sistemas Unix. Su filosofía de software libre y su extensibilidad lo hicieron extremadamente popular entre programadores y académicos.
+
+Características Revolucionarias
+
+Emacs introdujo varios conceptos revolucionarios en el mundo de los editores de texto:
+
+1. Extensibilidad completa: Todo en Emacs puede ser modificado y extendido usando Emacs Lisp.
+
+2. Entorno integrado: Más que un simple editor, Emacs se convirtió en un entorno completo que incluye correo electrónico, navegador web, calendario, calculadora, y mucho más.
+
+3. Autodocumentación: Emacs incluye documentación completa accesible desde el propio editor.
+
+4. Multiplataforma: Funciona en prácticamente cualquier sistema operativo.
+
+Impacto en la Computación
+
+Emacs ha tenido un impacto profundo en el desarrollo de software:
+
+- Inspiró el desarrollo de muchos otros editores extensibles
+- Estableció estándares para interfaces de usuario en entornos de texto
+- Contribuyó significativamente al movimiento de software libre
+- Sigue siendo activamente desarrollado después de más de 40 años
+
+Versiones Modernas
+
+Hoy en día, GNU Emacs continúa siendo desarrollado activamente. La versión actual incluye soporte para gráficos modernos, Unicode completo, y miles de paquetes de extensión disponibles a través de repositorios como MELPA.
+
+Emacs sigue siendo una herramienta fundamental para muchos programadores, escritores, y académicos alrededor del mundo, demostrando la visión duradera de Richard Stallman de crear herramientas de software verdaderamente libres y extensibles.

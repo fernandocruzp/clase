@@ -1,0 +1,117 @@
+Configuración de Personalización para Emacs
+
+Este archivo contiene las configuraciones de Emacs Lisp que puedes copiar a tu archivo ~/.emacs o ~/.emacs.d/init.el para personalizar tu entorno de Emacs.
+
+=== CONFIGURACIONES BÁSICAS ===
+
+;; Quitar elementos visuales innecesarios
+(setq inhibit-startup-screen t)    ; Sin pantalla de inicio
+(tool-bar-mode -1)                 ; Sin barra de herramientas
+(menu-bar-mode -1)                 ; Sin barra de menú
+(scroll-bar-mode -1)               ; Sin barra de desplazamiento
+
+;; Mejoras visuales
+(global-linum-mode t)              ; Números de línea
+(global-hl-line-mode t)            ; Resaltar línea actual
+(show-paren-mode t)                ; Resaltar paréntesis
+
+;; Configuración de indentación
+(setq-default indent-tabs-mode nil) ; Usar espacios en lugar de tabs
+(setq-default tab-width 4)          ; Ancho de tab = 4 espacios
+
+;; Configuración de respaldo
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+
+=== CONFIGURACIÓN DE CORREO GMAIL ===
+
+;; Configuración para enviar correo usando Gmail SMTP
+(setq send-mail-function 'smtpmail-send-it
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "tu-email@gmail.com" "tu-contraseña-de-aplicacion"))
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-user "tu-email@gmail.com")
+
+;; Configuración adicional para correo
+(setq user-mail-address "tu-email@gmail.com"
+      user-full-name "Tu Nombre Completo")
+
+;; Habilitar STARTTLS
+(require 'starttls)
+
+NOTA IMPORTANTE SOBRE GMAIL:
+Para usar Gmail con Emacs, necesitas:
+1. Habilitar la verificación en dos pasos en tu cuenta de Gmail
+2. Generar una "contraseña de aplicación" específica para Emacs
+3. Usar esa contraseña de aplicación en lugar de tu contraseña normal
+
+=== CONFIGURACIONES ADICIONALES ÚTILES ===
+
+;; Configuración de codificación
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
+;; Configuración de ventanas
+(setq split-height-threshold nil)   ; Preferir división vertical
+(setq split-width-threshold 0)      ; Siempre dividir verticalmente si es posible
+
+;; Configuración de búsqueda
+(setq search-highlight t)           ; Resaltar búsquedas
+(setq query-replace-highlight t)    ; Resaltar reemplazos
+
+;; Configuración de autoguardado
+(setq auto-save-default t)          ; Habilitar autoguardado
+(setq auto-save-timeout 20)         ; Autoguardar cada 20 segundos
+
+;; Configuración de completado
+(setq completion-ignore-case t)     ; Ignorar mayúsculas en completado
+(setq read-file-name-completion-ignore-case t)
+
+;; Configuración de buffers
+(setq uniquify-buffer-name-style 'forward) ; Nombres únicos para buffers
+
+=== ATAJOS DE TECLADO PERSONALIZADOS ===
+
+;; Atajos útiles
+(global-set-key (kbd "C-x C-b") 'ibuffer)  ; Mejor lista de buffers
+(global-set-key (kbd "M-/") 'hippie-expand) ; Mejor autocompletado
+(global-set-key (kbd "C-s") 'isearch-forward-regexp) ; Búsqueda con regexp por defecto
+
+;; Función personalizada para insertar fecha
+(defun insertar-fecha ()
+  "Inserta la fecha actual en formato YYYY-MM-DD"
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d")))
+
+(global-set-key (kbd "C-c d") 'insertar-fecha)
+
+=== CONFIGURACIÓN PARA PROGRAMACIÓN ===
+
+;; Configuración para programación en C
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+;; Configuración para Python
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 4)
+            (setq python-indent-offset 4)))
+
+;; Resaltar líneas largas
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
+=== INSTRUCCIONES DE USO ===
+
+1. Copia las configuraciones que desees usar
+2. Pega en tu archivo ~/.emacs o ~/.emacs.d/init.el
+3. Guarda el archivo
+4. Reinicia Emacs o evalúa el buffer con M-x eval-buffer
+5. Para el correo, reemplaza "tu-email@gmail.com" y configura la contraseña de aplicación
+
+¡Experimenta con diferentes configuraciones para encontrar lo que mejor funcione para ti!
